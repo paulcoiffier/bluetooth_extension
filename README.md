@@ -2,7 +2,7 @@
 Extension pour la configuration et l'utilisation d'un module Bluetooth Arduino
 <br />
 # Installation
-Téléchargez l'extension en cliquant <a href="https://github.com/paulcoiffier/bluetooth_extension/raw/master/dist/Controleur%20moteur.zip">ICI</a>
+Téléchargez l'extension en cliquant <a href="https://github.com/paulcoiffier/bluetooth_extension/raw/master/dist/Bluetooth%20extension.zip">ICI</a>
 <br />
 Pour l'installer, ouvrez le gestionnaire d'extensions MBlock (choisir "zip file" en tant que type de fichier à ouvrir) puis sélectionnez le fichier téléchargé.
 
