@@ -1,0 +1,47 @@
+﻿{	"extensionName": "Bluetooth controller",
+	"sort":0,  
+	"javascriptURL":"js/bluetooth.js", // define the path of JavaScript file
+    "firmware":"1.0",  // firmware version 
+    "extensionPort":0, // network port of extension, 0 for serial port
+	"blockSpecs": [ // module defining array
+		[
+			"w",
+			"Bluetooth init : TX : %n RX : %n Nom : %s Code Pin : %n)",
+			"init",
+			"7",
+			"6",
+			"BTSlave",
+			"1234",
+			{
+				"setup":"",
+				"inc":"#include \"bluetooth.h\"",
+				"def":"BluetoothClass bluetooth; \n",
+				"work":"bluetooth.init({0},{1},{2},{3}); \n",
+				"loop":"bluetooth.bluetoothLoop(); \n"
+			}
+		],
+		["b","data available?","isAvailable",
+		{"setup":"","inc":"","def":"","work":"bluetooth.dataLineAvailable()","loop":""}],
+		["R","read line","readLine",
+		{"setup":"","inc":"","def":"","work":"bluetooth.readDataLine()","loop":""}],
+		
+	],
+	"menus": {
+		"digital":["0","1"], // menu,
+		"motors":["1","2","3","4"], // menu
+		"sens":["0","1"], // menu
+		"digitalValues":["HIGH","LOW"], // menu,
+	},
+	"values":{ // corresponding values for "HIGH" and "LOW"
+		"0":0, 
+		"1":1,
+		"AVANT":1, 
+		"ARRIERE":0
+	},
+	"translators":{
+		"fr_FR":{ // Chinese version
+			"Bluetooth controller":"Contrôleur Bluetooth",
+			"Motor controller : %d.motors state : %d.digital rotation : %d.sens  speed : %n)":"Contrôleur moteur : %d.motors état : %d.digital sens : %d.sens  vitesse : %n)"
+		}
+	}
+}
