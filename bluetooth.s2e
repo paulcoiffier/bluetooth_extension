@@ -1,4 +1,4 @@
-﻿{	"extensionName": "Bluetooth controller",
+﻿{	"extensionName": "Contrôleur Bluetooth",
 	"sort":0,  
 	"javascriptURL":"js/bluetooth.js", // define the path of JavaScript file
     "firmware":"1.0",  // firmware version 
